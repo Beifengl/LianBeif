@@ -68,9 +68,9 @@ jobs:
     # 运行 unicom 签到任务
     - name: Run unicom daily task
       env:
-        user: ${{secrets.unicom_user}}
-        password: ${{secrets.unicom_password}}
-        user2: ${{secrets.unicom_user2}}
-        password2: ${{secrets.unicom_password2}}
-        appid: ${{secrets.unicom_appid}}
+        user: ${{secrets.bf_user}}
+        password: ${{secrets.bf_password}}
+        user2: ${{secrets.bf_user2}}
+        password2: ${{secrets.bf_password2}}
+        appid: ${{secrets.bf_appid}}
       run: node index.js unicom --accountSn=1,2 --user-1=${user} --password-1=${password} --appid-1=${appid} --user-2=${user2} --password-2=${password2} --appid-2=${appid}
